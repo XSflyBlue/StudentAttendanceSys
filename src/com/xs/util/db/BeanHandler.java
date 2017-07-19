@@ -1,11 +1,11 @@
-package com.xs.util.db;
+ï»¿package com.xs.util.db;
 
 import java.sql.ResultSet;
 import java.lang.reflect.Field;
 import java.sql.ResultSetMetaData;
 
 /**
-* ½«½á¹û¼¯×ª»»³Ébean¶ÔÏóµÄ´¦ÀíÆ÷
+* å°†ç»“æœé›†è½¬æ¢æˆbeanå¯¹è±¡çš„å¤„ç†å™¨
 *
 */ 
 public class BeanHandler implements ResultSetHandler {
@@ -19,13 +19,13 @@ public class BeanHandler implements ResultSetHandler {
                 return null;
             }
             Object bean = clazz.newInstance();
-            //µÃµ½½á¹û¼¯ÔªÊı¾İ
+            //å¾—åˆ°ç»“æœé›†å…ƒæ•°æ®
             ResultSetMetaData metadata = rs.getMetaData();
-            int columnCount = metadata.getColumnCount();//µÃµ½½á¹û¼¯ÖĞÓĞ¼¸ÁĞÊı¾İ
+            int columnCount = metadata.getColumnCount();//å¾—åˆ°ç»“æœé›†ä¸­æœ‰å‡ åˆ—æ•°æ®
             for(int i=0;i<columnCount;i++){
-                String coulmnName = metadata.getColumnName(i+1);//µÃµ½Ã¿ÁĞµÄÁĞÃû
+                String coulmnName = metadata.getColumnName(i+1);//å¾—åˆ°æ¯åˆ—çš„åˆ—å
                 Object coulmnData = rs.getObject(i+1);
-                Field f = clazz.getDeclaredField(coulmnName);//·´Éä³öÀàÉÏÁĞÃû¶ÔÓ¦µÄÊôĞÔ
+                Field f = clazz.getDeclaredField(coulmnName);//åå°„å‡ºç±»ä¸Šåˆ—åå¯¹åº”çš„å±æ€§
                 f.setAccessible(true);
                 f.set(bean, coulmnData);
             }

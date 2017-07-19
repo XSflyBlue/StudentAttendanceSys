@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -31,14 +31,14 @@ import com.xs.dao.ITeacherDao;
 import com.xs.dao.impl.TeacherDaoImpl;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
- * ½Ì¹¤¸öÈËĞÅÏ¢´°Ìå
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+ * æ•™å·¥ä¸ªäººä¿¡æ¯çª—ä½“
  *    
  * @author flyblue
  */
 public class TchInfoFrame extends javax.swing.JFrame {
     /**
-	 * ³ÉÔ±±äÁ¿
+	 * æˆå‘˜å˜é‡
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -71,7 +71,7 @@ public class TchInfoFrame extends javax.swing.JFrame {
     private JTextField jTextField5;                  
 
 	/**
-     * ¹¹Ôìº¯Êı
+     * æ„é€ å‡½æ•°
      */
     public TchInfoFrame() {
         initComponents();
@@ -107,10 +107,10 @@ public class TchInfoFrame extends javax.swing.JFrame {
         jButton3 = new JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-     	setTitle("½ÌÊ¦¸öÈËĞÅÏ¢");        // ÉèÖÃ´°Ìå±êÌâ
-   		setResizable(false);   		   // ÉèÖÃ´°¿Ú²»¿É±ä
+     	setTitle("æ•™å¸ˆä¸ªäººä¿¡æ¯");        // è®¾ç½®çª—ä½“æ ‡é¢˜
+   		setResizable(false);   		   // è®¾ç½®çª—å£ä¸å¯å˜
    		
-     	// ¾ÓÖĞÏÔÊ¾¡£
+     	// å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -118,35 +118,35 @@ public class TchInfoFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-350) / 2, (screenHeightpx-350) / 2);
    		setLocationByPlatform(false);
    		
-        // ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+        // è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
 
    		/** 
-   		 * Ò³Ãæ²¼¾Ö
+   		 * é¡µé¢å¸ƒå±€
    		 * 
    		 */
-   		// Í¨¹ıID²éÑ¯½ÌÊ¦¸öÈËĞÅÏ¢
+   		// é€šè¿‡IDæŸ¥è¯¢æ•™å¸ˆä¸ªäººä¿¡æ¯
 		ITeacherDao tchDao = new TeacherDaoImpl();
 		teacher = tchDao.selectByPrimaryKey(Integer.parseInt(flagId));
-		//½ÌÊ¦ĞÅÏ¢Õ¹Ê¾
-        jLabel3.setText("ĞÕÃû");
+		//æ•™å¸ˆä¿¡æ¯å±•ç¤º
+        jLabel3.setText("å§“å");
         jTextField1.setEditable(false);
         jTextField1.setText(teacher.getTeacher_name());
 
-        jLabel4.setText("½ÌÊ¦±àºÅ");
+        jLabel4.setText("æ•™å¸ˆç¼–å·");
         jTextField2.setEditable(false);
         jTextField2.setText(String.valueOf(teacher.getTeacher_id()));
 
-        jLabel5.setText("ËùÊôÑ§Ôº");
+        jLabel5.setText("æ‰€å±å­¦é™¢");
         jTextField3.setEditable(false);
         jTextField3.setText(teacher.getCollege_name());
 
-        jLabel6.setText("ËùÊô¿ÆÊÒ");
+        jLabel6.setText("æ‰€å±ç§‘å®¤");
         jTextField4.setEditable(false);
         jTextField4.setText(teacher.getFaculty_name());
 
-        jLabel7.setText("µç×ÓÓÊÏä");
+        jLabel7.setText("ç”µå­é‚®ç®±");
         jTextField5.setEditable(false);
         jTextField5.setText(teacher.getTeacher_email());
 
@@ -198,8 +198,8 @@ public class TchInfoFrame extends javax.swing.JFrame {
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         
-        // ¸öÈËÕÕÆ¬Õ¹Ê¾ÇøÓò
-		// ¼ÓÔØTPictureConfig.propertiesÅäÖÃÎÄ¼ş
+        // ä¸ªäººç…§ç‰‡å±•ç¤ºåŒºåŸŸ
+		// åŠ è½½TPictureConfig.propertiesé…ç½®æ–‡ä»¶
         File file =new File("TPictureConfig.properties");
         InputStream in = null;
         prop = null;
@@ -218,7 +218,7 @@ public class TchInfoFrame extends javax.swing.JFrame {
                 e.printStackTrace();    
             }    
         }else{
-    		// ¼ÓÔØTPictureConfig.propertiesÅäÖÃÎÄ¼ş
+    		// åŠ è½½TPictureConfig.propertiesé…ç½®æ–‡ä»¶
     		try {
     			in = new FileInputStream("TPictureConfig.properties");
     		} catch (FileNotFoundException e1) {
@@ -237,7 +237,7 @@ public class TchInfoFrame extends javax.swing.JFrame {
 			picture=prop.getProperty("default");
 		}
 		
-        jLabel1.setText("¸öÈËÕÕÆ¬");
+        jLabel1.setText("ä¸ªäººç…§ç‰‡");
         jLabel2.setSize(105,120);
 		ImageIcon image = null;
 		if(picture.substring(0,1).equals("/")){
@@ -254,7 +254,7 @@ public class TchInfoFrame extends javax.swing.JFrame {
 				image.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
 		jLabel2.setIcon(image);
 
-        jButton1.setText("ĞŞ¸Ä¸öÈËÕÕÆ¬");
+        jButton1.setText("ä¿®æ”¹ä¸ªäººç…§ç‰‡");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -303,15 +303,15 @@ public class TchInfoFrame extends javax.swing.JFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        // ¹¦ÄÜ°´Å¥ÇøÓò
-        jButton2.setText("ĞŞ¸Ä¸öÈËÓÊÏä");
+        // åŠŸèƒ½æŒ‰é’®åŒºåŸŸ
+        jButton2.setText("ä¿®æ”¹ä¸ªäººé‚®ç®±");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         
-        jButton3.setText("·µ»ØÉÏÒ»¼¶²Ëµ¥");
+        jButton3.setText("è¿”å›ä¸Šä¸€çº§èœå•");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -369,16 +369,16 @@ public class TchInfoFrame extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jButton1ActionPerformed(ActionEvent evt) {
     	// TODO add your handling code here:
-    	// ĞŞ¸Ä±¾µØÍ¼Æ¬
+    	// ä¿®æ”¹æœ¬åœ°å›¾ç‰‡
     	JFileChooser chooser = new JFileChooser();
     	chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
     	chooser.setFileFilter(new FileNameExtensionFilter("image files(*.jpg,*.jpeg,*.gif,*.png)", "jpg","jpeg","gif","png"));
-    	chooser.showDialog(new JLabel(), "Ñ¡Ôñ");
+    	chooser.showDialog(new JLabel(), "é€‰æ‹©");
     	File file=chooser.getSelectedFile();
     	String extention=null;
     	if(file==null){
@@ -387,7 +387,7 @@ public class TchInfoFrame extends javax.swing.JFrame {
     	
     	int i = file.getName().lastIndexOf(".");
     	if(i>-1 && i<file.length()){
-    		extention = file.getName().substring(i+1); //--À©Õ¹Ãû
+    		extention = file.getName().substring(i+1); //--æ‰©å±•å
     	}
     	if(extention!=null 
     		&& (extention.equalsIgnoreCase("jpg")
@@ -404,7 +404,7 @@ public class TchInfoFrame extends javax.swing.JFrame {
 					fos = new FileOutputStream("TPictureConfig.properties");
 					DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
 	                prop.store(fos, df.format(new Date()));
-	                JOptionPane.showMessageDialog(null, "¸öÈËÕÕÆ¬ĞŞ¸Ä³É¹¦", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+	                JOptionPane.showMessageDialog(null, "ä¸ªäººç…§ç‰‡ä¿®æ”¹æˆåŠŸ", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
 	                TchInfoFrame frame = new TchInfoFrame(flagId);
 					frame.setVisible(true);
 					frame.parentFrame=parentFrame;
@@ -432,8 +432,8 @@ public class TchInfoFrame extends javax.swing.JFrame {
 				}
     		}
     	}else{
-    		JOptionPane.showMessageDialog(null, "ÎÄ¼şÀàĞÍ²»Ö§³Ö", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
-    		chooser.showDialog(new JLabel(), "Ñ¡Ôñ");
+    		JOptionPane.showMessageDialog(null, "æ–‡ä»¶ç±»å‹ä¸æ”¯æŒ", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
+    		chooser.showDialog(new JLabel(), "é€‰æ‹©");
     	}
     }
     
@@ -476,7 +476,7 @@ public class TchInfoFrame extends javax.swing.JFrame {
     } 
     
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //

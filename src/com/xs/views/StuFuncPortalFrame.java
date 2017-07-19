@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -34,15 +34,15 @@ import com.xs.dao.IStudentDao;
 import com.xs.dao.impl.StudentDaoImpl;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
- *  ¿Í»§¶ËĞÅÏ¢´°Ìå(Ñ§Éú)
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+ *  å®¢æˆ·ç«¯ä¿¡æ¯çª—ä½“(å­¦ç”Ÿ)
  *    
  * @author flyblue
  */
 public class StuFuncPortalFrame extends javax.swing.JFrame {
 
     /**
-	 * ³ÉÔ±±äÁ¿
+	 * æˆå‘˜å˜é‡
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -70,7 +70,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
     private JTextField jTextField1;
     
 	/**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public StuFuncPortalFrame() {
         initComponents();
@@ -84,7 +84,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
     // <"Generated Code">                    
     private void initComponents() {
     	/**
-    	 * ´´½¨³ÉÔ±±äÁ¿
+    	 * åˆ›å»ºæˆå‘˜å˜é‡
     	 */
     	
         jPanel1 = new JPanel();
@@ -105,15 +105,15 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
         jTable2 = new JTable();
 
         /**
-         * ³£¼û´°ÌåÉèÖÃ
+         * å¸¸è§çª—ä½“è®¾ç½®
          * 
          */
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(new Dimension(500, 470));
-		setTitle("Ñ§Éú¿¼ÇÚÏµÍ³");                        // ÉèÖÃ´°Ìå±êÌâ
-//		setResizable(false);                            // ÉèÖÃ´°¿Ú²»¿É±ä
+		setTitle("å­¦ç”Ÿè€ƒå‹¤ç³»ç»Ÿ");                        // è®¾ç½®çª—ä½“æ ‡é¢˜
+//		setResizable(false);                            // è®¾ç½®çª—å£ä¸å¯å˜
         jTable2.setEnabled(false);
-     	// ¾ÓÖĞÏÔÊ¾¡£
+     	// å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -121,16 +121,16 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-500) / 2, (screenHeightpx-470) / 2);
    		setLocationByPlatform(false);
 
-        // ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+        // è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
 
    		/** 
-   		 * Ò³Ãæ²¼¾Ö
+   		 * é¡µé¢å¸ƒå±€
    		 * 
    		 */
         jPanel1.setBorder(BorderFactory.createEtchedBorder());
-        //	¸öÈËÕÕÆ¬Õ¹Ê¾
+        //	ä¸ªäººç…§ç‰‡å±•ç¤º
         File file =new File("SPictureConfig.properties");
         InputStream in = null;
         prop = null;
@@ -149,7 +149,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
                 e.printStackTrace();    
             }    
         }else{
-    		// ¼ÓÔØSPictureConfig.propertiesÅäÖÃÎÄ¼ş
+    		// åŠ è½½SPictureConfig.propertiesé…ç½®æ–‡ä»¶
     		try {
     			in = new FileInputStream("SPictureConfig.properties");
     		} catch (FileNotFoundException e1) {
@@ -185,7 +185,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
 		image.setImage(
 				image.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_DEFAULT));
 		jLabel1.setIcon(image);
-		//  ÏÔÊ¾ID
+		//  æ˜¾ç¤ºID
         jLabel2.setText(flagId);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -206,35 +206,35 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
         );
-        // Ãæ°å±ß¿ò
+        // é¢æ¿è¾¹æ¡†
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         
-        // ºËĞÄ¹¦ÄÜÇø(°´Å¥µÄÊÂ¼ş°ó¶¨)
-        jButton1.setText("²é¿´¸öÈËĞÅÏ¢");
+        // æ ¸å¿ƒåŠŸèƒ½åŒº(æŒ‰é’®çš„äº‹ä»¶ç»‘å®š)
+        jButton1.setText("æŸ¥çœ‹ä¸ªäººä¿¡æ¯");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jButton2.setText("ĞŞ¸Ä¸öÈËĞÅÏ¢");
+        jButton2.setText("ä¿®æ”¹ä¸ªäººä¿¡æ¯");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jButton3.setText("ĞŞ¸Ä¸öÈËÃÜÂë");
+        jButton3.setText("ä¿®æ”¹ä¸ªäººå¯†ç ");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jButton4.setText("²é¿´½ÌÊ¦ĞÅÏ¢");
+        jButton4.setText("æŸ¥çœ‹æ•™å¸ˆä¿¡æ¯");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jButton5.setText("²é¿´¿Î³ÌĞÅÏ¢");
+        jButton5.setText("æŸ¥çœ‹è¯¾ç¨‹ä¿¡æ¯");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -271,15 +271,15 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        //Ãæ°å±ß¿ò
+        //é¢æ¿è¾¹æ¡†
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        // ²éÑ¯ÇøÓò
-        jLabel3.setText("ÇëÊäÈëÒª²éÑ¯µÄ¿¼ÇÚ¼ÇÂ¼µÄ¿Î³Ì±àºÅ");
-        // ÎÄ±¾ÊäÈë¿òÄ¬ÈÏÎª¿Õ
+        // æŸ¥è¯¢åŒºåŸŸ
+        jLabel3.setText("è¯·è¾“å…¥è¦æŸ¥è¯¢çš„è€ƒå‹¤è®°å½•çš„è¯¾ç¨‹ç¼–å·");
+        // æ–‡æœ¬è¾“å…¥æ¡†é»˜è®¤ä¸ºç©º
         jTextField1.setText("");
-        // ²éÑ¯°´Å¥
-        jButton6.setText("²éÑ¯");
+        // æŸ¥è¯¢æŒ‰é’®
+        jButton6.setText("æŸ¥è¯¢");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -313,16 +313,16 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
                 .addGap(0, 22, Short.MAX_VALUE))
         );
 
-        // Ãæ°å±ß¿ò
+        // é¢æ¿è¾¹æ¡†
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        // ±í¸ñÄ¬ÈÏÏÔÊ¾ÉèÖÃ
+        // è¡¨æ ¼é»˜è®¤æ˜¾ç¤ºè®¾ç½®
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
         	new Object [][] {},
             new String [] {
-                "¿¼ÇÚÊ±¼ä", "¿¼ÇÚ¿Î³Ì", "¿¼ÇÚ½á¹û"
+                "è€ƒå‹¤æ—¶é—´", "è€ƒå‹¤è¯¾ç¨‹", "è€ƒå‹¤ç»“æœ"
             }
         ));
-        // ±í¸ñÖÃÓÚ¹ö¶¯´°ÌåÖĞ
+        // è¡¨æ ¼ç½®äºæ»šåŠ¨çª—ä½“ä¸­
         jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -368,7 +368,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
     }                     
 
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jButton1ActionPerformed(ActionEvent evt) {
@@ -385,7 +385,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(ActionEvent evt) {
     	// TODO add your handling code here:
-    	JOptionPane.showMessageDialog(null, "È¨ÏŞ²»×ã£¬½ö¹ÜÀíÔ±¿ÉÓÃ", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+    	JOptionPane.showMessageDialog(null, "æƒé™ä¸è¶³ï¼Œä»…ç®¡ç†å‘˜å¯ç”¨", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
     }                                        
 
     private void jButton3ActionPerformed(ActionEvent evt) {
@@ -431,7 +431,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
             jTable2.setModel(new javax.swing.table.DefaultTableModel(
                 	new Object [][] {},
                     new String [] {
-                        "¿¼ÇÚÊ±¼ä", "¿¼ÇÚ¿Î³Ì", "¿¼ÇÚ½á¹û"
+                        "è€ƒå‹¤æ—¶é—´", "è€ƒå‹¤è¯¾ç¨‹", "è€ƒå‹¤ç»“æœ"
                     }
                 ));
     		return;
@@ -450,15 +450,15 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
                 }
             	jTable2.setModel(new javax.swing.table.DefaultTableModel(obj,
                         new String [] {
-                            "¿¼ÇÚÊ±¼ä", "¿¼ÇÚ¿Î³Ì", "¿¼ÇÚ½á¹û"
+                            "è€ƒå‹¤æ—¶é—´", "è€ƒå‹¤è¯¾ç¨‹", "è€ƒå‹¤ç»“æœ"
                         }
                     ));
         	}else{
-        		JOptionPane.showMessageDialog(null, "ÎŞ²éÑ¯½á¹û", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+        		JOptionPane.showMessageDialog(null, "æ— æŸ¥è¯¢ç»“æœ", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
                 jTable2.setModel(new javax.swing.table.DefaultTableModel(
                     	new Object [][] {},
                         new String [] {
-                            "¿¼ÇÚÊ±¼ä", "¿¼ÇÚ¿Î³Ì", "¿¼ÇÚ½á¹û"
+                            "è€ƒå‹¤æ—¶é—´", "è€ƒå‹¤è¯¾ç¨‹", "è€ƒå‹¤ç»“æœ"
                         }
                     ));
         	}
@@ -466,7 +466,7 @@ public class StuFuncPortalFrame extends javax.swing.JFrame {
     }                                        
     
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //

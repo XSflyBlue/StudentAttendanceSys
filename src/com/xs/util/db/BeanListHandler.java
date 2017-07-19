@@ -1,4 +1,4 @@
-package com.xs.util.db;
+锘縫ackage com.xs.util.db;
 
 import java.sql.ResultSet;
 import java.lang.reflect.Field;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-*将结果集转换成bean对象的list集合的处理器
+*灏嗙粨鏋滈泦杞崲鎴恇ean瀵硅薄鐨刲ist闆嗗悎鐨勫鐞嗗櫒
 *
 */ 
 public class BeanListHandler implements ResultSetHandler {

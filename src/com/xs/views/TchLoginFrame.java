@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -24,8 +24,8 @@ import com.xs.dao.ITeacherDao;
 import com.xs.dao.impl.TeacherDaoImpl;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
- *   ½Ì¹¤µÇÂ½´°Ìå
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+ *   æ•™å·¥ç™»é™†çª—ä½“
  *    
  * @author flyblue
  */
@@ -38,11 +38,11 @@ public class TchLoginFrame extends JFrame {
 	private static final int DEFAULT_WIDTH = 300;
 	private static final int DEFAULT_HEIGHT = 300;
 
-	public TchLoginFrame(String title) {		//´°ÌåÀà
-		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);		// ÉèÖÃ´°Ìå´óĞ¡
-		setTitle(title);		                    // ÉèÖÃ´°Ìå±êÌâ
+	public TchLoginFrame(String title) {		//çª—ä½“ç±»
+		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);		// è®¾ç½®çª—ä½“å¤§å°
+		setTitle(title);		                    // è®¾ç½®çª—ä½“æ ‡é¢˜
 		
-		// ¾ÓÖĞÏÔÊ¾¡£
+		// å±…ä¸­æ˜¾ç¤ºã€‚
 		Toolkit kit = Toolkit.getDefaultToolkit();
 		Dimension screenSize = kit.getScreenSize();
 		int screenWidthpx = screenSize.width;
@@ -50,26 +50,26 @@ public class TchLoginFrame extends JFrame {
 		setLocation((screenWidthpx-300) / 2, (screenHeightpx-300) / 2);
 		setLocationByPlatform(false);
 		
-		// ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+		// è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
 		Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
 		setIconImage(img);
 		
-		// ÉèÖÃ´°ÌåµÄÄÚÈİÃæ°å£¬¸ÃÃæ°å°üº¬ÁËËùÓĞµÄÓĞĞ§GUI×é¼şĞÅÏ¢
+		// è®¾ç½®çª—ä½“çš„å†…å®¹é¢æ¿ï¼Œè¯¥é¢æ¿åŒ…å«äº†æ‰€æœ‰çš„æœ‰æ•ˆGUIç»„ä»¶ä¿¡æ¯
 		TchLoginPanel loginPanel = new TchLoginPanel();
 		setContentPane(loginPanel);
 		
-		// ÉèÖÃ´°¿ÚÆäËûÏÔÊ¾ÊôĞÔ
+		// è®¾ç½®çª—å£å…¶ä»–æ˜¾ç¤ºå±æ€§
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		setResizable(false);
 	}
 
-	private class TchLoginPanel extends JPanel {		//Ãæ°åÈİÆ÷Àà
+	private class TchLoginPanel extends JPanel {		//é¢æ¿å®¹å™¨ç±»
 		/**
 		 * 
 		 */
 		private static final long serialVersionUID = 1L;
-		// ¶¨ÒåµÇÂ½ÈİÆ÷PanelÖĞµÄ¿Ø¼şÔªËØ¡£
+		// å®šä¹‰ç™»é™†å®¹å™¨Panelä¸­çš„æ§ä»¶å…ƒç´ ã€‚
 		JLabel picLabel;
 		JLabel idLabel, pwdLabel;
 		JTextField stuIdTextField;
@@ -78,24 +78,24 @@ public class TchLoginFrame extends JFrame {
 		JPanel buttonPanel, infoPanel;
 		JCheckBox adminCheckBox;
 
-		// µÇÂ½ÈİÆ÷panel¹¹Ôì£¬½«ËùÓĞ¿Ø¼şÔªËØ×°ÈëÈİÆ÷¡£
+		// ç™»é™†å®¹å™¨panelæ„é€ ï¼Œå°†æ‰€æœ‰æ§ä»¶å…ƒç´ è£…å…¥å®¹å™¨ã€‚
 		public TchLoginPanel() {
-			// Éú³ÉËùÓĞ¿Ø¼ş¶ÔÏó
+			// ç”Ÿæˆæ‰€æœ‰æ§ä»¶å¯¹è±¡
 			picLabel = new JLabel();
-			idLabel = new JLabel("½Ì¹¤ID£º "); // ¹¹ÔìÆ÷²ÎÊıÎª±êÇ©ÏÔÊ¾ÎÄ±¾
-			pwdLabel = new JLabel("ÃÜ    Âë£º "); // ¹¹ÔìÆ÷²ÎÊıÎª±êÇ©ÏÔÊ¾ÎÄ±¾
+			idLabel = new JLabel("æ•™å·¥IDï¼š "); // æ„é€ å™¨å‚æ•°ä¸ºæ ‡ç­¾æ˜¾ç¤ºæ–‡æœ¬
+			pwdLabel = new JLabel("å¯†    ç ï¼š "); // æ„é€ å™¨å‚æ•°ä¸ºæ ‡ç­¾æ˜¾ç¤ºæ–‡æœ¬
 			stuIdTextField = new JTextField(20);
 			pwdField = new JPasswordField(20);
-			okButton = new JButton("µÇÂ½"); // ¹¹ÔìÆ÷²ÎÊıÎª°´Å¥ÏÔÊ¾ÎÄ±¾
-			clearButton = new JButton("Çå¿ÕĞÅÏ¢");
+			okButton = new JButton("ç™»é™†"); // æ„é€ å™¨å‚æ•°ä¸ºæŒ‰é’®æ˜¾ç¤ºæ–‡æœ¬
+			clearButton = new JButton("æ¸…ç©ºä¿¡æ¯");
 			buttonPanel = new JPanel();
 			infoPanel = new JPanel();
-			adminCheckBox = new JCheckBox("ÎÒÊÇ¹ÜÀíÔ±");
+			adminCheckBox = new JCheckBox("æˆ‘æ˜¯ç®¡ç†å‘˜");
 			
-			// ÉèÖÃTchLoginPanel²¼¾ÖÎªBorderLayout¡£
+			// è®¾ç½®TchLoginPanelå¸ƒå±€ä¸ºBorderLayoutã€‚
 			setLayout(new BorderLayout());
-			// ÒÀ´ÎÌí¼Ópic¡¢ loginĞÅÏ¢¿Ø¼şµ½Ãæ°åÈİÆ÷£¬
-			// ²¢ÉèÖÃinfoPanel²¼¾Ö¹ÜÀíÆ÷ÎªFlowLayout¡£
+			// ä¾æ¬¡æ·»åŠ picã€ loginä¿¡æ¯æ§ä»¶åˆ°é¢æ¿å®¹å™¨ï¼Œ
+			// å¹¶è®¾ç½®infoPanelå¸ƒå±€ç®¡ç†å™¨ä¸ºFlowLayoutã€‚
 			infoPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 			picLabel.setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT / 2);
 			ImageIcon image = new ImageIcon(this.getClass().getResource("/images/top1.jpg"));
@@ -116,30 +116,30 @@ public class TchLoginFrame extends JFrame {
 			infoPanel.add(adminCheckBox);
 			add(infoPanel, BorderLayout.CENTER);
 			
-			// ÒÀ´ÎÌí¼Ó°´Å¥¿Ø¼şµ½Ãæ°åÈİÆ÷£¬ buttonPanel²¼¾Ö¹ÜÀíÆ÷Ä¬ÈÏÁ÷²¼¾Ö£¬
-			// ²¢½«buttonPanel¿Ø¼ş×÷ÎªStuLoginPanelµÄµ×¶Ë×é¼ş¡£
+			// ä¾æ¬¡æ·»åŠ æŒ‰é’®æ§ä»¶åˆ°é¢æ¿å®¹å™¨ï¼Œ buttonPanelå¸ƒå±€ç®¡ç†å™¨é»˜è®¤æµå¸ƒå±€ï¼Œ
+			// å¹¶å°†buttonPanelæ§ä»¶ä½œä¸ºStuLoginPanelçš„åº•ç«¯ç»„ä»¶ã€‚
 			buttonPanel.add(okButton);
 			buttonPanel.add(clearButton);
 			add(buttonPanel, BorderLayout.SOUTH);
-			//°ó¶¨ÊÂ¼ş
+			//ç»‘å®šäº‹ä»¶
 			ButtonAction buttonAction = new ButtonAction();
 			okButton.addActionListener(buttonAction);
 			clearButton.addActionListener(buttonAction);
 		}
 
-		private class ButtonAction implements ActionListener {		//°´Å¥¼àÌıÀà
+		private class ButtonAction implements ActionListener {		//æŒ‰é’®ç›‘å¬ç±»
 			@Override
-			public void actionPerformed(ActionEvent e) {		//µÇÂ¼ÑéÖ¤
+			public void actionPerformed(ActionEvent e) {		//ç™»å½•éªŒè¯
 				if (e.getSource().equals(okButton)) {
 					String username = stuIdTextField.getText().trim();
 					char[] text = pwdField.getPassword();
 					String password = String.valueOf(text);
 
 					if (username.equals("")) {
-						JOptionPane.showMessageDialog(null, "ÓÃ»§ÃûÎª¿Õ£¡", "µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "ç”¨æˆ·åä¸ºç©ºï¼", "ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 						return;
 					} else if (password.equals("")) {
-						JOptionPane.showMessageDialog(null, "ÃÜÂëÎª¿Õ£¡", "µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "å¯†ç ä¸ºç©ºï¼", "ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 						return;
 					}
 
@@ -150,7 +150,7 @@ public class TchLoginFrame extends JFrame {
 							try {
 								teacher= tchDao.selectByPrimaryKey(Integer.parseInt(username));
 							} catch (Exception e2) {
-								JOptionPane.showMessageDialog(null, "Êı¾İ¿âÁ¬½ÓÊ§°Ü", "µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(null, "æ•°æ®åº“è¿æ¥å¤±è´¥", "ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 								return;
 							}
 							
@@ -160,7 +160,7 @@ public class TchLoginFrame extends JFrame {
 								frame.parentFrame = TchLoginFrame.this;
 								TchLoginFrame.this.setVisible(false);
 							} else {
-								JOptionPane.showMessageDialog(null, "ÃÜÂë´íÎó»òÓÃ»§Ãû²»´æÔÚ£¡", "µÇÂ¼Ê§°Ü", JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(null, "å¯†ç é”™è¯¯æˆ–ç”¨æˆ·åä¸å­˜åœ¨ï¼", "ç™»å½•å¤±è´¥", JOptionPane.ERROR_MESSAGE);
 								pwdField.setText("");
 							}
 						}
@@ -175,7 +175,7 @@ public class TchLoginFrame extends JFrame {
 
 //	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
-//		TchLoginFrame frame = new TchLoginFrame("½Ì¹¤µÇÂ½´°¿Ú");
+//		TchLoginFrame frame = new TchLoginFrame("æ•™å·¥ç™»é™†çª—å£");
 //	}
 
 }

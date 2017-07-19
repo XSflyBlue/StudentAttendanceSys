@@ -1,4 +1,4 @@
-package com.xs.bean;
+﻿package com.xs.bean;
 
 public class Record {
     private Integer attendanceRecord_id;

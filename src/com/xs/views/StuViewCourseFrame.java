@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -17,14 +17,14 @@ import com.xs.dao.IStudentDao;
 import com.xs.dao.impl.StudentDaoImpl;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
- * Ñ§Éú²é¿´¿Î³ÌĞÅÏ¢
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+ * å­¦ç”ŸæŸ¥çœ‹è¯¾ç¨‹ä¿¡æ¯
  *    
  * @author flyblue
  */
 public class StuViewCourseFrame extends javax.swing.JFrame {
 	/**
-	 * ³ÉÔ±±äÁ¿
+	 * æˆå‘˜å˜é‡
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -40,7 +40,7 @@ public class StuViewCourseFrame extends javax.swing.JFrame {
     private JTable jTable1;                
 
 	/**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public StuViewCourseFrame() {
         initComponents();
@@ -62,10 +62,10 @@ public class StuViewCourseFrame extends javax.swing.JFrame {
         jButton1 = new JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-     	setTitle("²é¿´¿Î³ÌĞÅÏ¢");        		// ÉèÖÃ´°Ìå±êÌâ
-//   		setResizable(false);     	   		// ÉèÖÃ´°¿Ú²»¿É±ä
+     	setTitle("æŸ¥çœ‹è¯¾ç¨‹ä¿¡æ¯");        		// è®¾ç½®çª—ä½“æ ‡é¢˜
+//   		setResizable(false);     	   		// è®¾ç½®çª—å£ä¸å¯å˜
    		jTable1.setEnabled(false);
-     	// ¾ÓÖĞÏÔÊ¾¡£
+     	// å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -73,24 +73,24 @@ public class StuViewCourseFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-500) / 2, (screenHeightpx-380) / 2);
    		setLocationByPlatform(false);
    		
-        // ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+        // è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
 
    		/** 
-   		 * Ò³Ãæ²¼¾Ö
+   		 * é¡µé¢å¸ƒå±€
    		 * 
    		 */
-   		// Í¨¹ıID²éÑ¯Ñ§Éú¿Î³Ì
+   		// é€šè¿‡IDæŸ¥è¯¢å­¦ç”Ÿè¯¾ç¨‹
    		IStudentDao stuDao = new StudentDaoImpl();
    		List<ClassInfoMore> ClassInfo =null;
    		ClassInfo = stuDao.selectClassBystuId(Integer.parseInt(flagId));
-   		// ÅĞ¶Ï²éÑ¯½á¹û²¢¸ø³öÏàÓ¦Õ¹Ê¾
+   		// åˆ¤æ–­æŸ¥è¯¢ç»“æœå¹¶ç»™å‡ºç›¸åº”å±•ç¤º
         if(ClassInfo==null){
         	jTable1.setModel(new javax.swing.table.DefaultTableModel(
                     new Object [][] {},
                     new String [] {
-                        "¿Î³ÌÃû×Ö", "ÉÏ¿ÎÆğÊ¼Ê±¼ä", "ÈÎ¿Î½ÌÊ¦", "½áÊøÖÜ´Î"
+                        "è¯¾ç¨‹åå­—", "ä¸Šè¯¾èµ·å§‹æ—¶é—´", "ä»»è¯¾æ•™å¸ˆ", "ç»“æŸå‘¨æ¬¡"
                     }
                 ));
     	}else{
@@ -104,7 +104,7 @@ public class StuViewCourseFrame extends javax.swing.JFrame {
 			}
         	jTable1.setModel(new javax.swing.table.DefaultTableModel(obj,
                     new String [] {
-                    	"¿Î³ÌÃû×Ö", "ÉÏ¿ÎÆğÊ¼Ê±¼ä", "ÈÎ¿Î½ÌÊ¦", "½áÊøÖÜ´Î"
+                    	"è¯¾ç¨‹åå­—", "ä¸Šè¯¾èµ·å§‹æ—¶é—´", "ä»»è¯¾æ•™å¸ˆ", "ç»“æŸå‘¨æ¬¡"
                     }
                 ));
     	}
@@ -122,8 +122,8 @@ public class StuViewCourseFrame extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
         );
 
-        // ¹¦ÄÜ°´Å¥ÇøÓò
-        jButton1.setText("·µ»ØÉÏ¼¶²Ëµ¥");
+        // åŠŸèƒ½æŒ‰é’®åŒºåŸŸ
+        jButton1.setText("è¿”å›ä¸Šçº§èœå•");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -162,7 +162,7 @@ public class StuViewCourseFrame extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +176,7 @@ public class StuViewCourseFrame extends javax.swing.JFrame {
     }                                        
 
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //

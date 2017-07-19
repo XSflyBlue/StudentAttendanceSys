@@ -1,4 +1,4 @@
-package com.xs.util.db;
+锘縫ackage com.xs.util.db;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -42,7 +42,7 @@ public static Object query(String sql,Object params[],ResultSetHandler rsh) thro
             }
             rs = pstmt.executeQuery();
             /**
-             * 对于查询返回的结果集处理使用到了策略模式
+             * 瀵逛簬鏌ヨ杩斿洖鐨勭粨鏋滈泦澶勭悊浣跨敤鍒颁簡绛栫暐妯″紡
              */
             return rsh.handler(rs);
             

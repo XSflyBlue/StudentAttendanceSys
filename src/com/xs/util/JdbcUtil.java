@@ -1,4 +1,4 @@
-package com.xs.util;
+ï»¿package com.xs.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,23 +9,23 @@ import java.sql.Statement;
 
 public class JdbcUtil {
 
-	// ¶¨ÒåÊı¾İ¿âÇı¶¯³ÌĞò
+	// å®šä¹‰æ•°æ®åº“é©±åŠ¨ç¨‹åº
 	private static final String DBDRIVER = "com.mysql.jdbc.Driver";
-	// Êı¾İ¿âÁ¬½ÓµØÖ·
+	// æ•°æ®åº“è¿æ¥åœ°å€
 	private static final String DBURL = "jdbc:MySQL://localhost:3306/stuattendance";
 	private static final String DBUSER = "root";
 	private static final String DBPASS = "123456";
 	private static final String DBNAME = "user";
 
 	static {
-		try {// ×¢²áÇı¶¯
+		try {// æ³¨å†Œé©±åŠ¨
 			Class.forName(DBDRIVER);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} 
 	}
 	public static Connection getConnection() {
-		Connection conn = null; // ÉùÃ÷Ò»¸öÁ¬½Ó¶ÔÏó
+		Connection conn = null; // å£°æ˜ä¸€ä¸ªè¿æ¥å¯¹è±¡
 		try {
 			conn = DriverManager.getConnection(DBURL, DBUSER, DBPASS);
 		} catch (SQLException e) {
@@ -46,9 +46,9 @@ public class JdbcUtil {
 	}
 
 	public static void close(PreparedStatement pstmt) {
-		if (pstmt != null) { // Èç¹ûpstmt Ô¤´¦Àí¶ÔÏó²»Îª¿Õ
+		if (pstmt != null) { // å¦‚æœpstmt é¢„å¤„ç†å¯¹è±¡ä¸ä¸ºç©º
 			try {
-				pstmt.close(); // ¹Ø±Õpstmt Ô¤´¦Àí¶ÔÏó
+				pstmt.close(); // å…³é—­pstmt é¢„å¤„ç†å¯¹è±¡
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -56,9 +56,9 @@ public class JdbcUtil {
 	}
 
 	public static void close(Statement stmt) {
-		if (stmt != null) { // Èç¹ûstmt ´¦Àí¶ÔÏó²»Îª¿Õ
+		if (stmt != null) { // å¦‚æœstmt å¤„ç†å¯¹è±¡ä¸ä¸ºç©º
 			try {
-				stmt.close(); // ¹Ø±Õstmt ´¦Àí¶ÔÏó
+				stmt.close(); // å…³é—­stmt å¤„ç†å¯¹è±¡
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -66,9 +66,9 @@ public class JdbcUtil {
 	}
 
 	public static void close(ResultSet rs) {
-		if (rs != null) { // Èç¹ûrs ½á¹û¼¯¶ÔÏó²»Îªnull
+		if (rs != null) { // å¦‚æœrs ç»“æœé›†å¯¹è±¡ä¸ä¸ºnull
 			try {
-				rs.close(); // ¹Ø±Õrs ½á¹û¼¯¶ÔÏó
+				rs.close(); // å…³é—­rs ç»“æœé›†å¯¹è±¡
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

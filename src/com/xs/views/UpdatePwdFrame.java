@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -26,7 +26,7 @@ import com.xs.dao.impl.TeacherDaoImpl;
  */
 public class UpdatePwdFrame extends javax.swing.JFrame {
     /**
-	 * ³ÉÔ±±äÁ¿
+	 * æˆå‘˜å˜é‡
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -48,7 +48,7 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
     private JPasswordField jPasswordField3;
 
     /**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public UpdatePwdFrame() {
         initComponents();
@@ -75,10 +75,10 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
         jPasswordField3 = new JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-     	setTitle("ĞŞ¸Ä¸öÈËÃÜÂë");        // ÉèÖÃ´°Ìå±êÌâ      
-   		setResizable(false);   		// ÉèÖÃ´°¿Ú²»¿É±ä
+     	setTitle("ä¿®æ”¹ä¸ªäººå¯†ç ");        // è®¾ç½®çª—ä½“æ ‡é¢˜      
+   		setResizable(false);   		// è®¾ç½®çª—å£ä¸å¯å˜
      	
-     	// ¾ÓÖĞÏÔÊ¾¡£
+     	// å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -86,12 +86,12 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-350) / 2, (screenHeightpx-230) / 2);
    		setLocationByPlatform(false);
    		
-        // ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+        // è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
 
-        // ¹¦ÄÜ°´Å¥ÇøÓò
-        jButton1.setText("È·ÈÏĞŞ¸Ä");
+        // åŠŸèƒ½æŒ‰é’®åŒºåŸŸ
+        jButton1.setText("ç¡®è®¤ä¿®æ”¹");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -99,7 +99,7 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1);
         
-        jButton2.setText("·µ»ØÉÏ¼¶²Ëµ¥");
+        jButton2.setText("è¿”å›ä¸Šçº§èœå•");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -127,15 +127,15 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
-        // ÃÜÂë¿ò
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("ĞŞ¸ÄÃÜÂë"));
+        // å¯†ç æ¡†
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("ä¿®æ”¹å¯†ç "));
 
-        jLabel1.setText("µ±Ç°ÃÜÂë");
+        jLabel1.setText("å½“å‰å¯†ç ");
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("ĞÂÃÜÂë");
+        jLabel2.setText("æ–°å¯†ç ");
 
-        jLabel3.setText("È·ÈÏÃÜÂë");
+        jLabel3.setText("ç¡®è®¤å¯†ç ");
 
         jPasswordField1.setText("");
 
@@ -208,7 +208,7 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
 	private void jButton1ActionPerformed(ActionEvent evt) {
@@ -221,7 +221,7 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
 		String password3 = String.valueOf(text);
 
 		if (password1.equals("") || password2.equals("") || password3.equals("")) {
-			JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "å¯†ç ä¸èƒ½ä¸ºç©º", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 
@@ -231,7 +231,7 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
 				Student student = stuDao.selectByPrimaryKey(Integer.parseInt(flagId));
 				if (password1.equals(student.getStudent_login_pwd())
 						&& stuDao.updateStuPwd(Integer.parseInt(flagId), password2) == 1) {
-					JOptionPane.showMessageDialog(null, "ĞŞ¸Ä³É¹¦", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ä¿®æ”¹æˆåŠŸ", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
 
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {
@@ -241,18 +241,18 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
 					UpdatePwdFrame.this.setVisible(false);
 					return;
 				} else {
-					JOptionPane.showMessageDialog(null, "ÃÜÂë´íÎó»òĞŞ¸ÄÊ§°Ü", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "å¯†ç é”™è¯¯æˆ–ä¿®æ”¹å¤±è´¥", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
 					jPasswordField2.setText("");
 					jPasswordField3.setText("");
 					return;
 				}
 			} else if (parentFrame1 != null) {
-				// ½Ì¹¤ĞÅÏ¢
+				// æ•™å·¥ä¿¡æ¯
 				ITeacherDao tchDao = new TeacherDaoImpl();
 				Teacher teacher = tchDao.selectByPrimaryKey(Integer.parseInt(flagId));
 				if (password1.equals(teacher.getTeacher_login_pwd())
 						&& tchDao.updateTeaPwd(Integer.parseInt(flagId), password2) == 1) {
-					JOptionPane.showMessageDialog(null, "ĞŞ¸Ä³É¹¦", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ä¿®æ”¹æˆåŠŸ", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
 
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {
@@ -262,14 +262,14 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
 					UpdatePwdFrame.this.setVisible(false);
 					return;
 				} else {
-					JOptionPane.showMessageDialog(null, "ÃÜÂë´íÎó»òĞŞ¸ÄÊ§°Ü", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "å¯†ç é”™è¯¯æˆ–ä¿®æ”¹å¤±è´¥", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
 					jPasswordField2.setText("");
 					jPasswordField3.setText("");
 					return;
 				}
 			}
 		} else {
-			JOptionPane.showMessageDialog(null, "Á½´ÎÃÜÂë²»Ò»ÖÂ", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "ä¸¤æ¬¡å¯†ç ä¸ä¸€è‡´", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
 			jPasswordField2.setText("");
 			jPasswordField3.setText("");
 			return;
@@ -297,7 +297,7 @@ public class UpdatePwdFrame extends javax.swing.JFrame {
     }                                        
 
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //        java.awt.EventQueue.invokeLater(new Runnable() {

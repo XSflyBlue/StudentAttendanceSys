@@ -1,4 +1,4 @@
-package com.xs.dao;
+﻿package com.xs.dao;
 
 import java.util.List;
 
@@ -12,23 +12,23 @@ public interface IStudentDao {
     int insert(Student record);
     
     int delete(Integer studentId);
-    //修改email
+    //淇敼email
     int updateStuEmail(Integer studentId,String email);
-    //修改密码
+    //淇敼瀵嗙爜
     int updateStuPwd(Integer studentId,String pwd);
-    //修改个人信息  
+    //淇敼涓汉淇℃伅  
     int updateByPrimaryKey(Student record);
-    //查看个人信息
+    //镆ョ湅涓汉淇℃伅
     Student selectByPrimaryKey(Integer studentId);
-    //查看学生列表
+    //镆ョ湅瀛︾敓鍒楄〃
     List<Student> selectAll();
-    //通过学生查看教师信息
+    //阃氲绷瀛︾敓镆ョ湅鏁椤笀淇℃伅
     List<TeacherInfo> selectTeacherBystuId(Integer studentId);
-    //通过学生查看课程信息
+    //阃氲绷瀛︾敓镆ョ湅璇剧▼淇℃伅
     List<ClassInfoMore> selectClassBystuId(Integer studentId);
-    //通过学生查询考勤结果
+    //阃氲绷瀛︾敓镆ヨ钥冨嫟缁撴灉
     List<AttendInfoMore> selectAttByclassId(Integer studentId,Integer class_id);
-    //通过classid查看学生列表
+    //阃氲绷classid镆ョ湅瀛︾敓鍒楄〃
     List<Student> selectStuByClass(Integer classId);
  
 }

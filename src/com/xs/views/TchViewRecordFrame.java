@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -15,8 +15,8 @@ import com.xs.dao.ITeacherDao;
 import com.xs.dao.impl.TeacherDaoImpl;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
- * Ñ§Éú¿¼ÇÚ²é¿´´°¿Ú
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+ * å­¦ç”Ÿè€ƒå‹¤æŸ¥çœ‹çª—å£
  *    
  * @author flyblue
  */
@@ -38,7 +38,7 @@ public class TchViewRecordFrame extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
 
 	/**
-     * ¹¹Ôìº¯Êı
+     * æ„é€ å‡½æ•°
      */
     public TchViewRecordFrame() {
         initComponents();
@@ -60,10 +60,10 @@ public class TchViewRecordFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-     	setTitle("²é¿´¿¼ÇÚĞÅÏ¢");        // ÉèÖÃ´°Ìå±êÌâ
-//   		setResizable(false);   		   // ÉèÖÃ´°¿Ú²»¿É±ä
+     	setTitle("æŸ¥çœ‹è€ƒå‹¤ä¿¡æ¯");        // è®¾ç½®çª—ä½“æ ‡é¢˜
+//   		setResizable(false);   		   // è®¾ç½®çª—å£ä¸å¯å˜
      	jTable1.setEnabled(false);
-     	// ¾ÓÖĞÏÔÊ¾¡£
+     	// å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -71,24 +71,24 @@ public class TchViewRecordFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-500) / 2, (screenHeightpx-380) / 2);
    		setLocationByPlatform(false);
    		
-        // ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+        // è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
 
    		/** 
-   		 * Ò³Ãæ²¼¾Ö
+   		 * é¡µé¢å¸ƒå±€
    		 * 
    		 */
-   		// Í¨¹ı½ÌÊ¦ID»ñÈ¡¿¼ÇÚ¼ÇÂ¼
+   		// é€šè¿‡æ•™å¸ˆIDè·å–è€ƒå‹¤è®°å½•
    		ITeacherDao TchDao = new TeacherDaoImpl();
    		List<AttendInfoMore> attInfo =null;
    		attInfo = TchDao.selectAttendByTea(Integer.parseInt(flagId));;
-   		// ¿¼ÇÚ¼ÇÂ¼²»´æÔÚÔòÏÔÊ¾Ä¬ÈÏ±í¸ñ£¬´æÔÚÔò¼ÇÂ¼Ìî³ä
+   		// è€ƒå‹¤è®°å½•ä¸å­˜åœ¨åˆ™æ˜¾ç¤ºé»˜è®¤è¡¨æ ¼ï¼Œå­˜åœ¨åˆ™è®°å½•å¡«å……
         if(attInfo==null){
         	jTable1.setModel(new javax.swing.table.DefaultTableModel(
         			new Object [][] {},
                     new String [] {
-                        "½ÌÑ§°àºÅ", "¿Î³ÌÃû³Æ", "Ñ§ÉúID", "ĞÕÃû", "¿¼ÇÚÊ±¼ä", "¿¼ÇÚ¼ÇÂ¼"
+                        "æ•™å­¦ç­å·", "è¯¾ç¨‹åç§°", "å­¦ç”ŸID", "å§“å", "è€ƒå‹¤æ—¶é—´", "è€ƒå‹¤è®°å½•"
                     }
                 ));
     	}else{
@@ -104,7 +104,7 @@ public class TchViewRecordFrame extends javax.swing.JFrame {
 			}
         	jTable1.setModel(new javax.swing.table.DefaultTableModel(obj,
                     new String [] {
-                    	"½ÌÑ§°àºÅ", "¿Î³ÌÃû³Æ", "Ñ§ÉúID", "ĞÕÃû", "¿¼ÇÚÊ±¼ä", "¿¼ÇÚ¼ÇÂ¼"
+                    	"æ•™å­¦ç­å·", "è¯¾ç¨‹åç§°", "å­¦ç”ŸID", "å§“å", "è€ƒå‹¤æ—¶é—´", "è€ƒå‹¤è®°å½•"
                     }
                 ));
     	}
@@ -122,8 +122,8 @@ public class TchViewRecordFrame extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
         );
         
-        // ¹¦ÄÜ°´Å¥ÇøÓò
-        jButton1.setText("·µ»ØÉÏ¼¶²Ëµ¥");
+        // åŠŸèƒ½æŒ‰é’®åŒºåŸŸ
+        jButton1.setText("è¿”å›ä¸Šçº§èœå•");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -162,7 +162,7 @@ public class TchViewRecordFrame extends javax.swing.JFrame {
     }// </editor-fold>      
     
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -176,7 +176,7 @@ public class TchViewRecordFrame extends javax.swing.JFrame {
     }                                    
 
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //

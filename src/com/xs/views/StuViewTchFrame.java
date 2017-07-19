@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -18,14 +18,14 @@ import com.xs.dao.IStudentDao;
 import com.xs.dao.impl.StudentDaoImpl;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
- * Ñ§Éú²é¿´½ÌÊ¦ĞÅÏ¢
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+ * å­¦ç”ŸæŸ¥çœ‹æ•™å¸ˆä¿¡æ¯
  *    
  * @author flyblue
  */
 public class StuViewTchFrame extends javax.swing.JFrame {
     /**
-	 * ³ÉÔ±±äÁ¿
+	 * æˆå‘˜å˜é‡
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -41,7 +41,7 @@ public class StuViewTchFrame extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
 
 	/**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public StuViewTchFrame() {
         initComponents();
@@ -63,10 +63,10 @@ public class StuViewTchFrame extends javax.swing.JFrame {
         jButton1 = new JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("²é¿´½ÌÊ¦ĞÅÏ¢");        // ÉèÖÃ´°Ìå±êÌâ
-//   		setResizable(false);       		// ÉèÖÃ´°¿Ú²»¿É±ä	
+        setTitle("æŸ¥çœ‹æ•™å¸ˆä¿¡æ¯");        // è®¾ç½®çª—ä½“æ ‡é¢˜
+//   		setResizable(false);       		// è®¾ç½®çª—å£ä¸å¯å˜	
    		jTable1.setEnabled(false);
-        // ¾ÓÖĞÏÔÊ¾¡£
+        // å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -74,24 +74,24 @@ public class StuViewTchFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-500) / 2, (screenHeightpx-380) / 2);
    		setLocationByPlatform(false);
    		
-        // ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+        // è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
 
    		/** 
-   		 * Ò³Ãæ²¼¾Ö
+   		 * é¡µé¢å¸ƒå±€
    		 * 
    		 */
-   		// Í¨¹ıID²éÑ¯½ÌÊ¦ĞÅÏ¢
+   		// é€šè¿‡IDæŸ¥è¯¢æ•™å¸ˆä¿¡æ¯
    		IStudentDao stuDao = new StudentDaoImpl();
    		List<TeacherInfo> tchInfo =null;
    		tchInfo = stuDao.selectTeacherBystuId(Integer.parseInt(flagId));
-   		// ÅĞ¶Ï²éÑ¯½á¹û²¢¸ø³öÏàÓ¦Õ¹Ê¾
+   		// åˆ¤æ–­æŸ¥è¯¢ç»“æœå¹¶ç»™å‡ºç›¸åº”å±•ç¤º
         if(tchInfo==null){
         	jTable1.setModel(new javax.swing.table.DefaultTableModel(
                     new Object [][] {},
                     new String [] {
-                        "ĞÕÃû", "ÈÎ¿Î¿Î³Ì", "ËùÊôÑ§Ôº"
+                        "å§“å", "ä»»è¯¾è¯¾ç¨‹", "æ‰€å±å­¦é™¢"
                     }
                 ));
     	}else{
@@ -105,7 +105,7 @@ public class StuViewTchFrame extends javax.swing.JFrame {
             }
         	jTable1.setModel(new javax.swing.table.DefaultTableModel(obj,
                     new String [] {
-                    	"ĞÕÃû", "ÈÎ¿Î¿Î³Ì", "ËùÊôÑ§Ôº"
+                    	"å§“å", "ä»»è¯¾è¯¾ç¨‹", "æ‰€å±å­¦é™¢"
                     }
                 ));
     	}
@@ -123,8 +123,8 @@ public class StuViewTchFrame extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
         );
 
-        // ¹¦ÄÜ°´Å¥ÇøÓò
-        jButton1.setText("·µ»ØÉÏ¼¶²Ëµ¥");
+        // åŠŸèƒ½æŒ‰é’®åŒºåŸŸ
+        jButton1.setText("è¿”å›ä¸Šçº§èœå•");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -162,7 +162,7 @@ public class StuViewTchFrame extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jButton1ActionPerformed(ActionEvent evt) {
@@ -176,7 +176,7 @@ public class StuViewTchFrame extends javax.swing.JFrame {
     }                                        
 
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //

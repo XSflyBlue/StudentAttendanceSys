@@ -1,4 +1,4 @@
-package com.xs.bean;
+﻿package com.xs.bean;
 
 public class Student {
     private Integer student_id;

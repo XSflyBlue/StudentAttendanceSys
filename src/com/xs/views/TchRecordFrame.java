@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -32,14 +32,14 @@ import com.xs.dao.impl.StudentDaoImpl;
 import com.xs.dao.impl.TeacherDaoImpl;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
- * Ñ§Éú¿¼ÇÚÂ¼Èë´°Ìå
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+ * å­¦ç”Ÿè€ƒå‹¤å½•å…¥çª—ä½“
  *    
  * @author flyblue
  */
 public class TchRecordFrame extends javax.swing.JFrame {
 	/**
-	 * ³ÉÔ±±äÁ¿
+	 * æˆå‘˜å˜é‡
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -68,7 +68,7 @@ public class TchRecordFrame extends javax.swing.JFrame {
     private JTextField jTextField3;                
 
 	/**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public TchRecordFrame() {
         initComponents();
@@ -101,10 +101,10 @@ public class TchRecordFrame extends javax.swing.JFrame {
         jButton2 = new JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-     	setTitle("Ñ§Éú¿¼ÇÚĞÅÏ¢Â¼Èë");        // ÉèÖÃ´°Ìå±êÌâ
-   		setResizable(false);   		       // ÉèÖÃ´°¿Ú²»¿É±ä
+     	setTitle("å­¦ç”Ÿè€ƒå‹¤ä¿¡æ¯å½•å…¥");        // è®¾ç½®çª—ä½“æ ‡é¢˜
+   		setResizable(false);   		       // è®¾ç½®çª—å£ä¸å¯å˜
    		
-     	// ¾ÓÖĞÏÔÊ¾¡£
+     	// å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -112,10 +112,10 @@ public class TchRecordFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-300) / 2, (screenHeightpx-300) / 2);
    		setLocationByPlatform(false);
    		
-        // ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+        // è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
-   		// ÉèÖÃ±³¾°Í¼
+   		// è®¾ç½®èƒŒæ™¯å›¾
         jLabel1.setSize(320,60);
 		ImageIcon image = new ImageIcon(this.getClass().getResource("/images/top1.jpg"));
 		image.setImage(
@@ -123,18 +123,18 @@ public class TchRecordFrame extends javax.swing.JFrame {
 		jLabel1.setIcon(image);
 		
    		/** 
-   		 * Ò³Ãæ²¼¾Ö
+   		 * é¡µé¢å¸ƒå±€
    		 * 
    		 */
-   		// Í¨¹ı½ÌÊ¦ID²éÑ¯½ÌÑ§°àĞÅÏ¢
+   		// é€šè¿‡æ•™å¸ˆIDæŸ¥è¯¢æ•™å­¦ç­ä¿¡æ¯
 		IClassInfoDao classInfoDao = new ClassInfoDaoImpl();
         List<ClassInfo> classInfo = null;
         classInfo = classInfoDao.selectClassByTea(Integer.parseInt(flagId));
         List<Student> students = null;
         map = new HashMap<ClassInfo, List<Student>>();
-   		// Í¨¹ı½ÌÊ¦ID²éÑ¯½ÌÑ§°àĞÅÏ¢
+   		// é€šè¿‡æ•™å¸ˆIDæŸ¥è¯¢æ•™å­¦ç­ä¿¡æ¯
         IStudentDao stuDao = new StudentDaoImpl();
-        // ³õÊ¼»¯ÏÂÀ­ÁĞ±íÒÔ¼°ÓëÏÂÀ­ÁĞ±íÏà¹ØµÄÎÄ±¾¿ò
+        // åˆå§‹åŒ–ä¸‹æ‹‰åˆ—è¡¨ä»¥åŠä¸ä¸‹æ‹‰åˆ—è¡¨ç›¸å…³çš„æ–‡æœ¬æ¡†
         if(classInfo!=null){
             for(int i=0;i<classInfo.size();i++)
             {
@@ -164,7 +164,7 @@ public class TchRecordFrame extends javax.swing.JFrame {
             jTextField1.setText(courseName);
             jTextField2.setText(stuName);
         }
-        // ¿¼ÇÚÊ±¼äÌî³äÏµÍ³µ±Ç°Ê±¼ä
+        // è€ƒå‹¤æ—¶é—´å¡«å……ç³»ç»Ÿå½“å‰æ—¶é—´
         Date nowTime = new Date(System.currentTimeMillis());
         SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         
@@ -181,18 +181,18 @@ public class TchRecordFrame extends javax.swing.JFrame {
             }
         });
         
-        // ÌáÊ¾±êÇ©
-		jLabel2.setText("½ÌÑ§°àºÅ");
-        jLabel3.setText("¿Î³ÌÃû³Æ");
-        jLabel4.setText("Ñ§  ÉúID");
-        jLabel5.setText("Ñ§ÉúĞÕÃû");
-        jLabel6.setText("¿¼ÇÚÊ±¼ä");
-        jLabel7.setText("¿¼ÇÚ¼ÇÂ¼");
-        // ¹Ì¶¨ÏÂÀ­ÁĞ±íÉèÖÃ
-        jComboBox3.addItem("Õı³£");
-        jComboBox3.addItem("³Ùµ½");
-        jComboBox3.addItem("²¡¼Ù");
-        jComboBox3.addItem("¿õµ½");
+        // æç¤ºæ ‡ç­¾
+		jLabel2.setText("æ•™å­¦ç­å·");
+        jLabel3.setText("è¯¾ç¨‹åç§°");
+        jLabel4.setText("å­¦  ç”ŸID");
+        jLabel5.setText("å­¦ç”Ÿå§“å");
+        jLabel6.setText("è€ƒå‹¤æ—¶é—´");
+        jLabel7.setText("è€ƒå‹¤è®°å½•");
+        // å›ºå®šä¸‹æ‹‰åˆ—è¡¨è®¾ç½®
+        jComboBox3.addItem("æ­£å¸¸");
+        jComboBox3.addItem("è¿Ÿåˆ°");
+        jComboBox3.addItem("ç—…å‡");
+        jComboBox3.addItem("æ—·åˆ°");
         jComboBox3.setSelectedIndex(0);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -250,15 +250,15 @@ public class TchRecordFrame extends javax.swing.JFrame {
                 .addGap(0, 7, Short.MAX_VALUE))
         );
 
-        // ¹¦ÄÜ°´Å¥ÇøÓò
-        jButton1.setText("Â¼Èë¿¼ÇÚĞÅÏ¢");
+        // åŠŸèƒ½æŒ‰é’®åŒºåŸŸ
+        jButton1.setText("å½•å…¥è€ƒå‹¤ä¿¡æ¯");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("·µ»ØÉÏÒ»¼¶²Ëµ¥");
+        jButton2.setText("è¿”å›ä¸Šä¸€çº§èœå•");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -305,18 +305,18 @@ public class TchRecordFrame extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // Â¼Èë¼ÇÂ¼
+        // å½•å…¥è®°å½•
     	Date nowTime = new Date(System.currentTimeMillis());
         SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     	
     	if(jTextField1.getText().equals("")
     			|| jTextField2.getText().equals("")
     			|| jTextField3.getText().equals("")){
-    		JOptionPane.showMessageDialog(null, "ĞÅÏ¢²»ÍêÕû", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+    		JOptionPane.showMessageDialog(null, "ä¿¡æ¯ä¸å®Œæ•´", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
     		jTextField3.setText(sdFormatter.format(nowTime));
     		return;
     	}
@@ -332,15 +332,15 @@ public class TchRecordFrame extends javax.swing.JFrame {
 		String regex = "^((\\d{2}(([02468][048])|([13579][26]))[\\-\\/\\s]?((((0?[13578])|(1[02]))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])))))|(\\d{2}(([02468][1235679])|([13579][01345789]))[\\-\\/\\s]?((((0?[13578])|(1[02]))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\\-\\/\\s]?((0?[1-9])|(1[0-9])|(2[0-8]))))))(\\s((([0-1][0-9])|(2?[0-3]))\\:([0-5]?[0-9])((\\s)|(\\:([0-5]?[0-9])))))?$";
     	
 		if(!jTextField1.getText().equals(classinfo.getCourse_name())){
-    		JOptionPane.showMessageDialog(null, "½ÌÑ§°àºÅÓë¿Î³ÌÃû×Ö²»Æ¥Åä", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+    		JOptionPane.showMessageDialog(null, "æ•™å­¦ç­å·ä¸è¯¾ç¨‹åå­—ä¸åŒ¹é…", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
     		jTextField3.setText(sdFormatter.format(nowTime));
     		return;
 		}else if(!jTextField2.getText().equals(student.getStudent_name())){
-    		JOptionPane.showMessageDialog(null, "Ñ§ÉúIDÓëÑ§ÉúĞÕÃû²»Æ¥Åä", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+    		JOptionPane.showMessageDialog(null, "å­¦ç”ŸIDä¸å­¦ç”Ÿå§“åä¸åŒ¹é…", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
     		jTextField3.setText(sdFormatter.format(nowTime));
     		return;
     	}else if(!jTextField3.getText().matches(regex)){
-    		JOptionPane.showMessageDialog(null, "Ê±¼ä¸ñÊ½´íÎó", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+    		JOptionPane.showMessageDialog(null, "æ—¶é—´æ ¼å¼é”™è¯¯", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
     		
             jTextField3.setText(sdFormatter.format(nowTime));
             return;
@@ -354,10 +354,10 @@ public class TchRecordFrame extends javax.swing.JFrame {
     	    record.setStudent_id(Integer.parseInt(stuId));
     	    record.setAttendance_status(String.valueOf(jComboBox3.getSelectedItem())); 		
     		if(tchDao.insertAttendance(record,attend)==1){
-    			JOptionPane.showMessageDialog(null, "Â¼Èë¿¼ÇÚĞÅÏ¢³É¹¦", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+    			JOptionPane.showMessageDialog(null, "å½•å…¥è€ƒå‹¤ä¿¡æ¯æˆåŠŸ", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
     			jTextField3.setText(sdFormatter.format(nowTime));
     		}else{
-    			JOptionPane.showMessageDialog(null, "Â¼Èë¿¼ÇÚĞÅÏ¢Ê§°Ü", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+    			JOptionPane.showMessageDialog(null, "å½•å…¥è€ƒå‹¤ä¿¡æ¯å¤±è´¥", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
     			jTextField3.setText(sdFormatter.format(nowTime));
     		}
     	}
@@ -374,7 +374,7 @@ public class TchRecordFrame extends javax.swing.JFrame {
     }   
     
     /**
-     * ÏÂÀ­ÁĞ±íÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * ä¸‹æ‹‰åˆ—è¡¨äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jComboBox1ItemStateChanged(ItemEvent evt) {
@@ -404,7 +404,7 @@ public class TchRecordFrame extends javax.swing.JFrame {
     }       
 
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //

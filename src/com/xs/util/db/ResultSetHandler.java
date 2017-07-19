@@ -1,4 +1,4 @@
-package com.xs.util.db;
+﻿package com.xs.util.db;
 
 import java.sql.ResultSet;
 

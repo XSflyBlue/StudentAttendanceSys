@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import com.xs.bean.Student;
 import com.xs.dao.ITeacherDao;
@@ -22,8 +22,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
- * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³
- * ½ÌÊ¦²é¿´Ñ§ÉúĞÅÏ¢´°¿Ú
+ * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ
+ * æ•™å¸ˆæŸ¥çœ‹å­¦ç”Ÿä¿¡æ¯çª—å£
  *    
  * @author flyblue
  */
@@ -31,7 +31,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
 
 
 	/**
-	 * ³ÉÔ±±äÁ¿
+	 * æˆå‘˜å˜é‡
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -54,7 +54,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
     private JTextField jTextField1;                 
 
 	/**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public TchViewStuFrame() {
         initComponents();
@@ -84,10 +84,10 @@ public class TchViewStuFrame extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("²é¿´Ñ§ÉúĞÅÏ¢");        // ÉèÖÃ´°Ìå±êÌâ
-//   		setResizable(false);   		// ÉèÖÃ´°¿Ú²»¿É±ä
+        setTitle("æŸ¥çœ‹å­¦ç”Ÿä¿¡æ¯");        // è®¾ç½®çª—ä½“æ ‡é¢˜
+//   		setResizable(false);   		// è®¾ç½®çª—å£ä¸å¯å˜
    		jTable1.setEnabled(false);
-        // ¾ÓÖĞÏÔÊ¾¡£
+        // å±…ä¸­æ˜¾ç¤ºã€‚
    		Toolkit kit = Toolkit.getDefaultToolkit();
    		Dimension screenSize = kit.getScreenSize();
    		int screenWidthpx = screenSize.width;
@@ -95,21 +95,21 @@ public class TchViewStuFrame extends javax.swing.JFrame {
      	setLocation((screenWidthpx-500) / 2, (screenHeightpx-380) / 2);
    		setLocationByPlatform(false);
         
-   		// ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+   		// è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
      	Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
    		setIconImage(img);
    		
    		/** 
-   		 * Ò³Ãæ²¼¾Ö
+   		 * é¡µé¢å¸ƒå±€
    		 * 
    		 */
-   		//²éÑ¯·½Ê½ÏÂÀ­ÁĞ±í
-        jLabel1.setText("ÇëÑ¡Ôñ²éÑ¯·½Ê½");
+   		//æŸ¥è¯¢æ–¹å¼ä¸‹æ‹‰åˆ—è¡¨
+        jLabel1.setText("è¯·é€‰æ‹©æŸ¥è¯¢æ–¹å¼");
 
-        jComboBox1.addItem("°´ĞÕÃû²éÑ¯");
-        jComboBox1.addItem("°´½ÌÑ§°à²éÑ¯");
-        jComboBox1.addItem("°´×¨Òµ²éÑ¯");
-        jComboBox1.addItem("°´Ñ§ºÅ²éÑ¯");
+        jComboBox1.addItem("æŒ‰å§“åæŸ¥è¯¢");
+        jComboBox1.addItem("æŒ‰æ•™å­¦ç­æŸ¥è¯¢");
+        jComboBox1.addItem("æŒ‰ä¸“ä¸šæŸ¥è¯¢");
+        jComboBox1.addItem("æŒ‰å­¦å·æŸ¥è¯¢");
         jComboBox1.setSelectedIndex(0);
         
 
@@ -134,11 +134,11 @@ public class TchViewStuFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel2.setText("ÇëÊäÈë²éÑ¯¹Ø¼ü×Ö");
+        jLabel2.setText("è¯·è¾“å…¥æŸ¥è¯¢å…³é”®å­—");
 
         jTextField1.setText("");
 
-        jButton1.setText("²éÑ¯");
+        jButton1.setText("æŸ¥è¯¢");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -169,11 +169,11 @@ public class TchViewStuFrame extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        // Ä¬ÈÏÏÔÊ¾±í¸ñ
+        // é»˜è®¤æ˜¾ç¤ºè¡¨æ ¼
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {},
             new String [] {
-                "ĞÕÃû", "Ñ§ºÅ", "ËùÊôÑ§Ôº", "×¨Òµ"
+                "å§“å", "å­¦å·", "æ‰€å±å­¦é™¢", "ä¸“ä¸š"
             }
         ));
         
@@ -197,8 +197,8 @@ public class TchViewStuFrame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
         );
 
-        // ¹¦ÄÜ°´Å¥ÇøÓò
-        jButton2.setText("ÖØĞÂ¿ªÊ¼²éÑ¯");
+        // åŠŸèƒ½æŒ‰é’®åŒºåŸŸ
+        jButton2.setText("é‡æ–°å¼€å§‹æŸ¥è¯¢");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -206,7 +206,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
         });
         jPanel3.add(jButton2);
 
-        jButton3.setText("·µ»ØÉÏ¼¶²Ëµ¥");
+        jButton3.setText("è¿”å›ä¸Šçº§èœå•");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -244,7 +244,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     /**
-     * °´Å¥ÊÂ¼ş°ó¶¨£¬´¦Àí·½·¨
+     * æŒ‰é’®äº‹ä»¶ç»‘å®šï¼Œå¤„ç†æ–¹æ³•
      * 
      */
     private void jButton1ActionPerformed(ActionEvent evt) {
@@ -257,7 +257,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
                  students = iTeacherDao.selectByStuname(Integer.parseInt(flagId), jTextField1.getText().trim());
             } else if (i == 1) {
             	if (!jTextField1.getText().trim().matches("^[0-9]*$")) {
-        			JOptionPane.showMessageDialog(null, "ÇëÕıÈ·ÊäÈë²éÑ¯ÄÚÈİ", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+        			JOptionPane.showMessageDialog(null, "è¯·æ­£ç¡®è¾“å…¥æŸ¥è¯¢å†…å®¹", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
         			jTextField1.setText("");
         			return;
         		}else{
@@ -267,7 +267,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
                  students  = iTeacherDao.selectByStuMajor(Integer.parseInt(flagId), jTextField1.getText().trim());
 			} else {
 				if (!jTextField1.getText().trim().matches("^[0-9]*$")) {
-        			JOptionPane.showMessageDialog(null, "ÇëÕıÈ·ÊäÈë²éÑ¯ÄÚÈİ", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+        			JOptionPane.showMessageDialog(null, "è¯·æ­£ç¡®è¾“å…¥æŸ¥è¯¢å†…å®¹", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
         			jTextField1.setText("");
         			return;
         		}else{
@@ -287,15 +287,15 @@ public class TchViewStuFrame extends javax.swing.JFrame {
                 jTable1.setModel(new javax.swing.table.DefaultTableModel(
                         obj,
                         new String [] {
-                                "ĞÕÃû", "Ñ§ºÅ", "ËùÊôÑ§Ôº", "×¨Òµ"
+                                "å§“å", "å­¦å·", "æ‰€å±å­¦é™¢", "ä¸“ä¸š"
                         }
                 ));
             }else{
-            	JOptionPane.showMessageDialog(null, "ÎŞ²éÑ¯½á¹û", "ÌáÊ¾ĞÅÏ¢", JOptionPane.ERROR_MESSAGE);
+            	JOptionPane.showMessageDialog(null, "æ— æŸ¥è¯¢ç»“æœ", "æç¤ºä¿¡æ¯", JOptionPane.ERROR_MESSAGE);
             	jTable1.setModel(new javax.swing.table.DefaultTableModel(
                         new Object [][] {},
                         new String [] {
-                                "ĞÕÃû", "Ñ§ºÅ", "ËùÊôÑ§Ôº", "×¨Òµ"
+                                "å§“å", "å­¦å·", "æ‰€å±å­¦é™¢", "ä¸“ä¸š"
                         }
                 ));
             }
@@ -303,7 +303,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
         else{  jTable1.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {},
                 new String [] {
-                        "ĞÕÃû", "Ñ§ºÅ", "ËùÊôÑ§Ôº", "×¨Òµ"
+                        "å§“å", "å­¦å·", "æ‰€å±å­¦é™¢", "ä¸“ä¸š"
                 }
         ));
         }
@@ -325,7 +325,7 @@ public class TchViewStuFrame extends javax.swing.JFrame {
     }  
 
     /**
-     * ´°ÌåĞ§¹û²âÊÔ
+     * çª—ä½“æ•ˆæœæµ‹è¯•
      */
 //    public static void main(String args[]) {
 //

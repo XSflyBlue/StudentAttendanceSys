@@ -1,4 +1,4 @@
-package com.xs.views;
+ï»¿package com.xs.views;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -19,25 +19,25 @@ import com.xs.util.WindowsHandler;
 
 public class MainLoginFrame extends JFrame {
 	/**
-	 * Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³ 
-	 *   µÇÂ¼Èë¿Ú´°Ìå
+	 * å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ 
+	 *   ç™»å½•å…¥å£çª—ä½“
 	 * 
 	 * @author flyblue
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private static final int DEFAULT_WIDTH = 300; //Ä¬ÈÏ´°Ìå¿í¶È
-	private static final int DEFAULT_HEIGHT = 300;//Ä¬ÈÏ´°Ìå¸ß¶È
+	private static final int DEFAULT_WIDTH = 300; //é»˜è®¤çª—ä½“å®½åº¦
+	private static final int DEFAULT_HEIGHT = 300;//é»˜è®¤çª—ä½“é«˜åº¦
 
-	public MainLoginFrame(String title) { 		  //´°ÌåÀà
+	public MainLoginFrame(String title) { 		  //çª—ä½“ç±»
 		/**
-		 * ´°Ìå³£¼ûÉèÖÃ
+		 * çª—ä½“å¸¸è§è®¾ç½®
 		 * 
 		 */		
-		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);      // ÉèÖÃ´°Ìå´óĞ¡
-		setTitle(title);							 // ÉèÖÃ´°Ìå±êÌâ
+		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);      // è®¾ç½®çª—ä½“å¤§å°
+		setTitle(title);							 // è®¾ç½®çª—ä½“æ ‡é¢˜
 		
-		// ¾ÓÖĞÏÔÊ¾¡£
+		// å±…ä¸­æ˜¾ç¤ºã€‚
 		Toolkit kit = Toolkit.getDefaultToolkit();
 		Dimension screenSize = kit.getScreenSize();
 		int screenWidthpx = screenSize.width;
@@ -45,44 +45,44 @@ public class MainLoginFrame extends JFrame {
 		setLocation((screenWidthpx-getWidth()) / 2, (screenHeightpx-getHeight()) / 2);
 		setLocationByPlatform(false);
 		
-		// ÉèÖÃ´°¿Ú×îĞ¡»¯Ê±ÏÔÊ¾µÄÍ¼±ê£¬¿ÉÑ¡¡£
+		// è®¾ç½®çª—å£æœ€å°åŒ–æ—¶æ˜¾ç¤ºçš„å›¾æ ‡ï¼Œå¯é€‰ã€‚
 		Image img = new ImageIcon(this.getClass().getResource("/images/001.png")).getImage();
 		setIconImage(img);
 		
-		// ÉèÖÃ´°ÌåµÄÄÚÈİÃæ°å£¬¸ÃÃæ°å°üº¬ÁËËùÓĞµÄÓĞĞ§GUI×é¼şĞÅÏ¢
+		// è®¾ç½®çª—ä½“çš„å†…å®¹é¢æ¿ï¼Œè¯¥é¢æ¿åŒ…å«äº†æ‰€æœ‰çš„æœ‰æ•ˆGUIç»„ä»¶ä¿¡æ¯
 		MainLoginPanel loginPanel = new MainLoginPanel();
 		setContentPane(loginPanel);
 		
-		// ÉèÖÃ´°¿ÚÆäËûÏÔÊ¾ÊôĞÔ
+		// è®¾ç½®çª—å£å…¶ä»–æ˜¾ç¤ºå±æ€§
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		setResizable(false);
 		
-		// ×¢²á´°¿Ú¼àÌıÆ÷
+		// æ³¨å†Œçª—å£ç›‘å¬å™¨
 		addWindowListener(new WindowsHandler());
 	}
 
-	private class MainLoginPanel extends JPanel { //Ãæ°åÈİÆ÷Àà
+	private class MainLoginPanel extends JPanel { //é¢æ¿å®¹å™¨ç±»
 		/**
 		 * 
 		 */
 		private static final long serialVersionUID = 1L;
-		// ¶¨ÒåµÇÂ½ÈİÆ÷PanelÖĞµÄ¿Ø¼şÔªËØ¡£
+		// å®šä¹‰ç™»é™†å®¹å™¨Panelä¸­çš„æ§ä»¶å…ƒç´ ã€‚
 		JLabel picLabel;
 		JButton stuLoginButton, tchLoginButton;
 		JPanel infoPanel;
 
-		// µÇÂ½ÈİÆ÷panel¹¹Ôì£¬½«ËùÓĞ¿Ø¼şÔªËØ×°ÈëÈİÆ÷¡£
+		// ç™»é™†å®¹å™¨panelæ„é€ ï¼Œå°†æ‰€æœ‰æ§ä»¶å…ƒç´ è£…å…¥å®¹å™¨ã€‚
 		public MainLoginPanel() {
-			// Éú³ÉËùÓĞ¿Ø¼ş¶ÔÏó
+			// ç”Ÿæˆæ‰€æœ‰æ§ä»¶å¯¹è±¡
 			picLabel = new JLabel();
-			stuLoginButton = new JButton("µã»÷Ìø×ªµ½Ñ§ÉúµÇÂ¼½çÃæ"); // ¹¹ÔìÆ÷²ÎÊıÎª°´Å¥ÏÔÊ¾ÎÄ±¾
-			tchLoginButton = new JButton("µã»÷Ìø×ªµ½½Ì¹¤µÇÂ¼½çÃæ");
+			stuLoginButton = new JButton("ç‚¹å‡»è·³è½¬åˆ°å­¦ç”Ÿç™»å½•ç•Œé¢"); // æ„é€ å™¨å‚æ•°ä¸ºæŒ‰é’®æ˜¾ç¤ºæ–‡æœ¬
+			tchLoginButton = new JButton("ç‚¹å‡»è·³è½¬åˆ°æ•™å·¥ç™»å½•ç•Œé¢");
 			infoPanel = new JPanel();
-			// ÉèÖÃStuLoginPanel²¼¾ÖÎªBorderLayout¡£
+			// è®¾ç½®StuLoginPanelå¸ƒå±€ä¸ºBorderLayoutã€‚
 			setLayout(new BorderLayout());
-			// ÒÀ´ÎÌí¼Ópic¡¢ loginĞÅÏ¢¿Ø¼şµ½Ãæ°åÈİÆ÷£¬
-			// ²¢ÉèÖÃinfoPanel²¼¾Ö¹ÜÀíÆ÷ÎªFlowLayout¡£
+			// ä¾æ¬¡æ·»åŠ picã€ loginä¿¡æ¯æ§ä»¶åˆ°é¢æ¿å®¹å™¨ï¼Œ
+			// å¹¶è®¾ç½®infoPanelå¸ƒå±€ç®¡ç†å™¨ä¸ºFlowLayoutã€‚
 			infoPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 			picLabel.setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT / 2);
 			ImageIcon image = new ImageIcon(this.getClass().getResource("/images/top1.jpg"));
@@ -93,28 +93,28 @@ public class MainLoginFrame extends JFrame {
 			infoPanel.add(stuLoginButton);
 			infoPanel.add(tchLoginButton);
 			add(infoPanel, BorderLayout.CENTER);
-			// ÒÀ´ÎÌí¼Ó°´Å¥¿Ø¼şµ½Ãæ°åÈİÆ÷£¬ buttonPanel²¼¾Ö¹ÜÀíÆ÷Ä¬ÈÏÁ÷²¼¾Ö£¬
-			// ²¢½«buttonPanel¿Ø¼ş×÷ÎªStuLoginPanelµÄµ×¶Ë×é¼ş¡£
-			//ÊÂ¼ş°ó¶¨
+			// ä¾æ¬¡æ·»åŠ æŒ‰é’®æ§ä»¶åˆ°é¢æ¿å®¹å™¨ï¼Œ buttonPanelå¸ƒå±€ç®¡ç†å™¨é»˜è®¤æµå¸ƒå±€ï¼Œ
+			// å¹¶å°†buttonPanelæ§ä»¶ä½œä¸ºStuLoginPanelçš„åº•ç«¯ç»„ä»¶ã€‚
+			//äº‹ä»¶ç»‘å®š
 			ButtonAction buttonAction = new ButtonAction();
 			stuLoginButton.addActionListener(buttonAction);
 			tchLoginButton.addActionListener(buttonAction);
 		}
 		
-		private class ButtonAction implements ActionListener { //°´Å¥¼àÌıÀà
+		private class ButtonAction implements ActionListener { //æŒ‰é’®ç›‘å¬ç±»
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource().equals(stuLoginButton)) {
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {
-							StuLoginFrame frame = new StuLoginFrame("Ñ§ÉúµÇÂ½Èë¿Ú");
+							StuLoginFrame frame = new StuLoginFrame("å­¦ç”Ÿç™»é™†å…¥å£");
 						}
 					});
 					MainLoginFrame.this.setVisible(false);
 				} else {
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {
-							TchLoginFrame frame = new TchLoginFrame("½Ì¹¤µÇÂ½Èë¿Ú");
+							TchLoginFrame frame = new TchLoginFrame("æ•™å·¥ç™»é™†å…¥å£");
 						}
 					});
 					MainLoginFrame.this.setVisible(false);
@@ -124,7 +124,7 @@ public class MainLoginFrame extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		//³ÌĞòÈë¿Ú
-		MainLoginFrame frame = new MainLoginFrame("Ñ§Éú¿¼ÇÚ¹ÜÀíÏµÍ³");
+		//ç¨‹åºå…¥å£
+		MainLoginFrame frame = new MainLoginFrame("å­¦ç”Ÿè€ƒå‹¤ç®¡ç†ç³»ç»Ÿ");
 	}
 }

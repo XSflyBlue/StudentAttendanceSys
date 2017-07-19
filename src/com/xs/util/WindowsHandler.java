@@ -1,4 +1,4 @@
-package com.xs.util;
+﻿package com.xs.util;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

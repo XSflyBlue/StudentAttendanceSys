@@ -1,4 +1,4 @@
-package com.xs.dao;
+ï»¿package com.xs.dao;
 
 import java.util.List;
 
@@ -11,29 +11,29 @@ import com.xs.bean.Teacher;
 public interface ITeacherDao {
 	
 
-    //ĞŞ¸Ä½ÌÊ¦ÓÊÏä
+    //ä¿®æ”¹æ•™å¸ˆé‚®ç®±
     int updateTeaEmail(Integer teacherId,String email);
-    //ĞŞ¸Ä½ÌÊ¦ÃÜÂë
+    //ä¿®æ”¹æ•™å¸ˆå¯†ç 
     int updateTeaPwd(Integer teacherId,String pwd);
-    //ĞŞ¸Ä½ÌÊ¦¸öÈËĞÅÏ¢
+    //ä¿®æ”¹æ•™å¸ˆä¸ªäººä¿¡æ¯
     int updateTea(Teacher record);
-    //²é¿´½ÌÊ¦¸öÈËĞÅÏ¢
+    //æŸ¥çœ‹æ•™å¸ˆä¸ªäººä¿¡æ¯
     Teacher selectByPrimaryKey(Integer teacherId);
-    //Í¨¹ıÑ§ÉúĞÕÃû²é¿´Ñ§ÉúĞÅÏ¢
+    //é€šè¿‡å­¦ç”Ÿå§“åæŸ¥çœ‹å­¦ç”Ÿä¿¡æ¯
     List<Student> selectByStuname(Integer teacherId,String stuname);
-    //Í¨¹ıÑ§Éúid²é¿´Ñ§ÉúĞÅÏ¢
+    //é€šè¿‡å­¦ç”ŸidæŸ¥çœ‹å­¦ç”Ÿä¿¡æ¯
     List<Student> selectByStuId(Integer teacherId,Integer studentId);
-    //Í¨¹ıÑ§Éú×¨Òµ²é¿´Ñ§ÉúĞÅÏ¢
+    //é€šè¿‡å­¦ç”Ÿä¸“ä¸šæŸ¥çœ‹å­¦ç”Ÿä¿¡æ¯
     List<Student> selectByStuMajor(Integer teacherId,String stumajor);
-    //Í¨¹ı°à¼¶ºÅ²é¿´Ñ§ÉúĞÅÏ¢
+    //é€šè¿‡ç­çº§å·æŸ¥çœ‹å­¦ç”Ÿä¿¡æ¯
     List<Student> selectByClassId(Integer teacherId,Integer classId);
-    //Â¼Èë¿¼ÇÚĞÅÏ¢
+    //å½•å…¥è€ƒå‹¤ä¿¡æ¯
     int insertAttendance(Record record,AttendanceInfo attend);
-    //Í¨¹ı½ÌÊ¦²é¿´ËùÓĞ¿¼ÇÚĞÅÏ¢
+    //é€šè¿‡æ•™å¸ˆæŸ¥çœ‹æ‰€æœ‰è€ƒå‹¤ä¿¡æ¯
     List<AttendInfoMore> selectAttendByTea(Integer teacherId);
-    //Í¨¹ı½ÌÊ¦ĞŞ¸Ä¿¼ÇÚĞÅÏ¢
+    //é€šè¿‡æ•™å¸ˆä¿®æ”¹è€ƒå‹¤ä¿¡æ¯
     int updateAttendBytea(AttendInfoMore attend);
-    //½ÌÊ¦Í¨¹ıËÑË÷½ÌÑ§°àµÃµ½¿¼ÇÚĞÅÏ¢
+    //æ•™å¸ˆé€šè¿‡æœç´¢æ•™å­¦ç­å¾—åˆ°è€ƒå‹¤ä¿¡æ¯
     List<AttendInfoMore> selectAttendByClass(Integer teacherId,Integer classId);
 
 

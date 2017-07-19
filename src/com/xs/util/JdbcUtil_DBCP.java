@@ -1,4 +1,4 @@
-package com.xs.util;
+ï»¿package com.xs.util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,23 +17,23 @@ import org.apache.commons.dbcp2.BasicDataSourceFactory;
 
 /**
 * @ClassName: JdbcUtil_DBCP
-* @Description: Êı¾İ¿âÁ¬½Ó¹¤¾ßÀà
+* @Description: æ•°æ®åº“è¿æ¥å·¥å…·ç±»
 *
 */ 
 public class JdbcUtil_DBCP {
     /**
-     * ÔÚjavaÖĞ£¬±àĞ´Êı¾İ¿âÁ¬½Ó³ØĞèÊµÏÖjava.sql.DataSource½Ó¿Ú£¬Ã¿Ò»ÖÖÊı¾İ¿âÁ¬½Ó³Ø¶¼ÊÇDataSource½Ó¿ÚµÄÊµÏÖ
-     * DBCPÁ¬½Ó³Ø¾ÍÊÇjavax.sql.DataSource½Ó¿ÚµÄÒ»¸ö¾ßÌåÊµÏÖ
+     * åœ¨javaä¸­ï¼Œç¼–å†™æ•°æ®åº“è¿æ¥æ± éœ€å®ç°java.sql.DataSourceæ¥å£ï¼Œæ¯ä¸€ç§æ•°æ®åº“è¿æ¥æ± éƒ½æ˜¯DataSourceæ¥å£çš„å®ç°
+     * DBCPè¿æ¥æ± å°±æ˜¯javax.sql.DataSourceæ¥å£çš„ä¸€ä¸ªå…·ä½“å®ç°
      */
     private static DataSource ds = null;
-    //ÔÚ¾²Ì¬´úÂë¿éÖĞ´´½¨Êı¾İ¿âÁ¬½Ó³Ø
+    //åœ¨é™æ€ä»£ç å—ä¸­åˆ›å»ºæ•°æ®åº“è¿æ¥æ± 
     static{
-            //¼ÓÔØdbcpconfig.propertiesÅäÖÃÎÄ¼ş
+            //åŠ è½½dbcpconfig.propertiesé…ç½®æ–‡ä»¶
         	InputStream in = JdbcUtil_DBCP.class.getClassLoader().getResourceAsStream("dbcpconfig.properties");
             Properties prop = new Properties();
             try {
 				prop.load(in);
-				//´´½¨Êı¾İÔ´
+				//åˆ›å»ºæ•°æ®æº
 				ds = BasicDataSourceFactory.createDataSource(prop);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -44,26 +44,26 @@ public class JdbcUtil_DBCP {
     
     /**
     * @Method: getConnection
-    * @Description: ´ÓÊı¾İÔ´ÖĞ»ñÈ¡Êı¾İ¿âÁ¬½Ó
+    * @Description: ä»æ•°æ®æºä¸­è·å–æ•°æ®åº“è¿æ¥
     * @return Connection
     * @throws SQLException
     */ 
     public static Connection getConnection() throws SQLException{
-        //´ÓÊı¾İÔ´ÖĞ»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //ä»æ•°æ®æºä¸­è·å–æ•°æ®åº“è¿æ¥
         return ds.getConnection();
     }
     
     /**
     * @Method: close
-    * @Description: ÊÍ·Å×ÊÔ´£¬
-    * ÊÍ·ÅµÄ×ÊÔ´°üÀ¨ConnectionÊı¾İ¿âÁ¬½Ó¶ÔÏó£¬¸ºÔğÖ´ĞĞSQLÃüÁîµÄStatement¶ÔÏó£¬´æ´¢²éÑ¯½á¹ûµÄResultSet¶ÔÏó
+    * @Description: é‡Šæ”¾èµ„æºï¼Œ
+    * é‡Šæ”¾çš„èµ„æºåŒ…æ‹¬Connectionæ•°æ®åº“è¿æ¥å¯¹è±¡ï¼Œè´Ÿè´£æ‰§è¡ŒSQLå‘½ä»¤çš„Statementå¯¹è±¡ï¼Œå­˜å‚¨æŸ¥è¯¢ç»“æœçš„ResultSetå¯¹è±¡
     *
     * @param conn
     */ 
     public static void close(Connection conn){
         if(conn!=null){
             try{
-                //½«ConnectionÁ¬½Ó¶ÔÏó»¹¸øÊı¾İ¿âÁ¬½Ó³Ø
+                //å°†Connectionè¿æ¥å¯¹è±¡è¿˜ç»™æ•°æ®åº“è¿æ¥æ± 
                 conn.close();
             }catch (Exception e) {
                 e.printStackTrace();
@@ -72,9 +72,9 @@ public class JdbcUtil_DBCP {
     }
     
 	public static void close(PreparedStatement pstmt) {
-		if (pstmt != null) { // Èç¹ûpstmt Ô¤´¦Àí¶ÔÏó²»Îª¿Õ
+		if (pstmt != null) { // å¦‚æœpstmt é¢„å¤„ç†å¯¹è±¡ä¸ä¸ºç©º
 			try {
-				pstmt.close(); // ¹Ø±Õpstmt Ô¤´¦Àí¶ÔÏó
+				pstmt.close(); // å…³é—­pstmt é¢„å¤„ç†å¯¹è±¡
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -82,9 +82,9 @@ public class JdbcUtil_DBCP {
 	}
 
 	public static void close(Statement stmt) {
-		if (stmt != null) { // Èç¹ûstmt ´¦Àí¶ÔÏó²»Îª¿Õ
+		if (stmt != null) { // å¦‚æœstmt å¤„ç†å¯¹è±¡ä¸ä¸ºç©º
 			try {
-				stmt.close(); // ¹Ø±Õstmt ´¦Àí¶ÔÏó
+				stmt.close(); // å…³é—­stmt å¤„ç†å¯¹è±¡
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -92,9 +92,9 @@ public class JdbcUtil_DBCP {
 	}
 
 	public static void close(ResultSet rs) {
-		if (rs != null) { // Èç¹ûrs ½á¹û¼¯¶ÔÏó²»Îªnull
+		if (rs != null) { // å¦‚æœrs ç»“æœé›†å¯¹è±¡ä¸ä¸ºnull
 			try {
-				rs.close(); // ¹Ø±Õrs ½á¹û¼¯¶ÔÏó
+				rs.close(); // å…³é—­rs ç»“æœé›†å¯¹è±¡
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
